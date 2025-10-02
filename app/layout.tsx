@@ -4,7 +4,6 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Playfair_Display } from "next/font/google"
 import { Oswald } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
 
@@ -35,7 +34,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${playfair.variable} ${oswald.variable}`}>
         <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
-        <Analytics />
       </body>
     </html>
   )

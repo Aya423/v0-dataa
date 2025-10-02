@@ -56,10 +56,7 @@ export default function AmazonPage() {
           {/* الفيديو */}
           <div className="border-8 border-yellow-400 rounded-lg shadow-xl p-2 bg-yellow-50 flex w-full">
             <video className="w-full h-full rounded object-cover" autoPlay loop muted playsInline>
-              <source
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/amaz-FJ3DhyoGIMHhGhilvoL2JZy8RD9Sjr.mp4"
-                type="video/mp4"
-              />
+              <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/amaz-DqxT5D3UgUqpx7lYYO6m6veq52xxN7.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -69,10 +66,7 @@ export default function AmazonPage() {
         {/* صندوق الصوت */}
         <div className="mt-6 w-full lg:w-1/2 mx-auto">
           <audio controls className="w-full rounded-lg">
-            <source
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/soothing-ocean-waves-372489-QYUbiCl8fA9JepkLdDY7K05lvbKcRe.mp3"
-              type="audio/mpeg"
-            />
+            <source src="/amazon-audio.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -90,12 +84,9 @@ export default function AmazonPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           {/* خريطة الحرائق على اليسار */}
-          <div className="border-8 border-yellow-400 rounded-lg shadow-xl p-2 bg-yellow-50 flex w-full">
-            <video className="w-full h-full rounded object-cover" autoPlay loop muted playsInline>
-              <source
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Video%202025-10-02%20at%2007.01.42_426e7750-QpGqj0qdYUYebiSAW2h07E8aceqZ54.mp4"
-                type="video/mp4"
-              />
+          <div className="border-8 border-yellow-400 rounded-lg shadow-xl p-2 bg-yellow-50 flex w-full overflow-hidden">
+            <video className="w-full h-full rounded object-cover scale-110" autoPlay loop muted playsInline>
+              <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Video%202025-10-02%20at%2014.46.57_d400de67-cBBvkyryAT9MLPvMXUUTlXP7C1Xq1y.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -118,18 +109,48 @@ export default function AmazonPage() {
         {/* صندوق الصوت */}
         <div className="mt-6 w-full lg:w-1/2 mx-auto">
           <audio controls className="w-full rounded-lg">
-            <source
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/soothing-ocean-waves-372489-QYUbiCl8fA9JepkLdDY7K05lvbKcRe.mp3"
-              type="audio/mpeg"
-            />
+            <source src="/amazon-audio.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+          <div className="bg-gray-100 p-8 rounded-md flex flex-col justify-center">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4" style={{ fontFamily: "Oswald, sans-serif" }}>
+              Record Low Water Levels
+            </h3>
+            <p className="text-gray-700 font-merri leading-relaxed mb-4">
+              The Port of Manaus recorded a water level of 12.66 meters on October 4, 2024 - the lowest since records
+              began in 1902. This severe drought is directly linked to deforestation and fires in the Amazon.
+            </p>
+            <p className="text-gray-700 font-merri leading-relaxed">
+              As trees are cut down, the forest loses its ability to generate rainfall. Less vegetation means less
+              moisture, creating a dangerous cycle of drought and fire that threatens river transportation, communities,
+              and wildlife throughout the region.
+            </p>
+          </div>
+
+          {/* الصورة - الرسم البياني */}
+          <div className="border-4 border-gray-300 rounded-lg shadow-xl p-4 bg-white">
+            <img
+              src="/amazon-water-levels-graph.jpg"
+              alt="Amazon River Water Levels Graph"
+              className="w-full h-full rounded object-contain"
+            />
+          </div>
         </div>
 
         <div className="mt-8 w-full border-t-2 border-gray-300"></div>
       </section>
 
       <section className="container mx-auto max-w-7xl px-6 py-16">
+        <h2
+          className="text-5xl font-bold text-center mb-12 text-gray-800 -mt-8"
+          style={{ fontFamily: "Oswald, sans-serif" }}
+        >
+          HUMAN ACTIVITIES
+        </h2>
+
         {/* الأعمدة المعكوسة */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           {/* الصورة على اليسار */}
@@ -140,12 +161,13 @@ export default function AmazonPage() {
           {/* النص على اليمين */}
           <div className="bg-black/60 p-8 rounded-md flex flex-col w-full">
             <p className="text-white font-merri tracking-wide leading-relaxed">
-              The Amazon River flows through the heart of the rainforest, carrying more water than any other river
-              system. Its vast network of tributaries creates a lifeline for countless ecosystems and communities.
+              Over the past two decades, human activities such as forest burning for agriculture and global greenhouse
+              gas emissions have increased atmospheric dryness over the Amazon.
             </p>
             <p className="text-white font-merri mt-6 leading-relaxed">
-              From space, the river appears as a massive blue artery cutting through the green canopy, a testament to
-              the power and beauty of one of Earth's most vital natural resources.
+              This reduces rainfall and soil moisture, weakening the forest’s ability to supply water to the Amazon
+              River. Fires release aerosols like black carbon, which warm the atmosphere and disrupt cloud formation,
+              further decreasing river flow and affecting aquatic life and local communities.
             </p>
           </div>
         </div>
