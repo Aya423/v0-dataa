@@ -38,7 +38,7 @@ export default function Home() {
       <LeftSidebar />
 
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden mt-16">
+      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
