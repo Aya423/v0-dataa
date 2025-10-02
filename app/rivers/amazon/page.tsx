@@ -91,18 +91,25 @@ export default function AmazonPage() {
             </video>
           </div>
 
-          {/* النص على اليمين */}
-          <div className="bg-black/60 p-8 rounded-md flex flex-col w-full">
-            <p className="text-white font-merri tracking-wide leading-relaxed">
-              Fires can occur naturally or due to human activity, affecting forests, grasslands, and wildlife. In the
-              Amazon, fires caused by deforestation and land clearing destroy forest and threaten countless species.
-            </p>
-            <p className="text-white font-merri mt-6 leading-relaxed">
-              These fires also impact the Amazon River and its surrounding vegetation. Loss of forest cover reduces the
-              rainforest’s ability to regulate rainfall, which can alter river flow and increase sediment in the water.
-              The weakened vegetation absorbs less carbon dioxide and disrupts the river ecosystem, affecting both
-              wildlife and the communities that depend on the Amazon for food, water, and resources.
-            </p>
+          <div
+            className="p-8 rounded-md flex flex-col w-full bg-cover bg-center relative overflow-hidden"
+            style={{ backgroundImage: "url('/fire-background.jpg')" }}
+          >
+            {/* overlay لجعل النص واضح */}
+            <div className="absolute inset-0 bg-black/70"></div>
+
+            <div className="relative z-10">
+              <p className="text-white font-merri tracking-wide leading-relaxed">
+                Fires can occur naturally or due to human activity, affecting forests, grasslands, and wildlife. In the
+                Amazon, fires caused by deforestation and land clearing destroy forest and threaten countless species.
+              </p>
+              <p className="text-white font-merri mt-6 leading-relaxed">
+                These fires also impact the Amazon River and its surrounding vegetation. Loss of forest cover reduces
+                the rainforest's ability to regulate rainfall, which can alter river flow and increase sediment in the
+                water. The weakened vegetation absorbs less carbon dioxide and disrupts the river ecosystem, affecting
+                both wildlife and the communities that depend on the Amazon for food, water, and resources.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -159,16 +166,24 @@ export default function AmazonPage() {
           </div>
 
           {/* النص على اليمين */}
-          <div className="bg-black/60 p-8 rounded-md flex flex-col w-full">
-            <p className="text-white font-merri tracking-wide leading-relaxed">
-              Over the past two decades, human activities such as forest burning for agriculture and global greenhouse
-              gas emissions have increased atmospheric dryness over the Amazon.
-            </p>
-            <p className="text-white font-merri mt-6 leading-relaxed">
-              This reduces rainfall and soil moisture, weakening the forest’s ability to supply water to the Amazon
-              River. Fires release aerosols like black carbon, which warm the atmosphere and disrupt cloud formation,
-              further decreasing river flow and affecting aquatic life and local communities.
-            </p>
+          <div
+            className="p-8 rounded-md flex flex-col w-full bg-cover bg-center relative overflow-hidden"
+            style={{ backgroundImage: "url('/drought-background.jpg')" }}
+          >
+            {/* overlay لجعل النص واضح */}
+            <div className="absolute inset-0 bg-black/70"></div>
+
+            <div className="relative z-10">
+              <p className="text-white font-merri tracking-wide leading-relaxed">
+                Over the past two decades, human activities such as forest burning for agriculture and global greenhouse
+                gas emissions have increased atmospheric dryness over the Amazon.
+              </p>
+              <p className="text-white font-merri mt-6 leading-relaxed">
+                This reduces rainfall and soil moisture, weakening the forest's ability to supply water to the Amazon
+                River. Fires release aerosols like black carbon, which warm the atmosphere and disrupt cloud formation,
+                further decreasing river flow and affecting aquatic life and local communities.
+              </p>
+            </div>
           </div>
         </div>
       </section>

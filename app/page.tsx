@@ -97,6 +97,31 @@ export default function Home() {
 
         {/* Content sections with relative positioning */}
         <div className="relative z-10">
+          {/* NASA River Statistics Section */}
+          <section className="py-16 px-4 backdrop-blur-sm bg-background/60">
+            <div className="container mx-auto max-w-6xl">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Text Content - Left Side */}
+                <div className="bg-background/70 backdrop-blur-md p-8 rounded-2xl border border-primary/20">
+                  <p className="text-lg text-foreground leading-relaxed">
+                    NASA estimates that between 1980 and 2009, rivers held 2,246 km³ of water, with the Amazon Basin
+                    containing 38% of it and discharging 6,789 km³ per year. Some rivers show reduced outflow due to
+                    human water use, highlighting the importance of monitoring and managing freshwater resources.
+                  </p>
+                </div>
+
+                {/* Image - Right Side with Animation */}
+                <div className="animate-slide-in-right">
+                  <img
+                    src="/nasa-satellite-view-of-rivers-and-water-bodies.jpg"
+                    alt="NASA river data visualization"
+                    className="w-full h-auto rounded-2xl shadow-2xl"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* River Cards Section */}
           <section className="py-16 px-4 backdrop-blur-sm bg-background/60">
             <div className="container mx-auto">
@@ -226,9 +251,7 @@ export default function Home() {
                         />
                       </div>
                       <h3 className="font-serif text-3xl font-bold mb-4 text-primary">Students</h3>
-                      <p className="text-muted-foreground leading-relaxed mb-6 italic">
-                        "how you treat the river?"
-                      </p>
+                      <p className="text-muted-foreground leading-relaxed mb-6 italic">"how you treat the river?"</p>
                       <Link
                         href="/students"
                         className="inline-block px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
