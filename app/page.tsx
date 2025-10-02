@@ -38,7 +38,7 @@ export default function Home() {
       <LeftSidebar />
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden mt-16">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
@@ -46,7 +46,7 @@ export default function Home() {
             loop
             muted
             playsInline
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-125"
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Video%202025-10-01%20at%2004.04.41_9bbb02de-1Fbcw5Yr6KkCHBchwEIKfMPnYMrZpi.mp4"
             onLoadedMetadata={(e) => {
               e.currentTarget.playbackRate = 0.5
@@ -58,12 +58,12 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4 text-balance mt-20">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground mb-4 text-balance mt-20">
             Breathing Rivers
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed text-pretty">
-            An awareness journey through the world's greatest rivers, discovering stories of life, civilization, and
-            nature!
+            "Welcome to Breathing Rivers–An awareness journey through the world's greatest rivers, discovering stories
+            of life, civilization, and nature!"
           </p>
           <div className="mt-8">
             <div className="inline-block animate-bounce">
@@ -97,25 +97,40 @@ export default function Home() {
 
         {/* Content sections with relative positioning */}
         <div className="relative z-10">
+          {/* Overview Section */}
+          <section ref={overviewRef} id="overview" className="py-20 px-4 backdrop-blur-sm bg-muted/50 scroll-mt-24">
+            <div className="container mx-auto max-w-4xl">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-8 text-foreground">Overview</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed text-center mb-6">
+                Welcome to Breathing Rivers, an immersive journey through the world's most magnificent waterways. Our
+                platform brings together stories, facts, and experiences that showcase how rivers have shaped
+                civilizations, cultures, and ecosystems throughout history. Explore the vital role these natural wonders
+                play in our world today.
+              </p>
+            </div>
+          </section>
+
           {/* NASA River Statistics Section */}
           <section className="py-16 px-4 backdrop-blur-sm bg-background/60">
             <div className="container mx-auto max-w-6xl">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                {/* Text Content - Left Side */}
-                <div className="bg-background/70 backdrop-blur-md p-8 rounded-2xl border border-primary/20">
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-12 text-foreground">
+                River Water Storage
+              </h2>
+              <div className="grid md:grid-cols-2 gap-8 items-stretch">
+                <div className="bg-background/70 backdrop-blur-md p-8 rounded-2xl border border-primary/20 h-full flex items-center">
                   <p className="text-lg text-foreground leading-relaxed">
                     NASA estimates that between 1980 and 2009, rivers held 2,246 km³ of water, with the Amazon Basin
                     containing 38% of it and discharging 6,789 km³ per year. Some rivers show reduced outflow due to
-                    human water use, highlighting the importance of monitoring and managing freshwater resources.
+                    human water use, highlighting the importance of monitoring and managing freshwater resources. The
+                    map shows the distribution of river water storage across different hydrologic regions worldwide.
                   </p>
                 </div>
 
-                {/* Image - Right Side with Animation */}
-                <div className="animate-slide-in-right">
+                <div className="animate-slide-in-right h-full">
                   <img
-                    src="/nasa-satellite-view-of-rivers-and-water-bodies.jpg"
-                    alt="NASA river data visualization"
-                    className="w-full h-auto rounded-2xl shadow-2xl"
+                    src="/river-water-storage-map.png"
+                    alt="NASA River Water Storage by Hydrologic Region"
+                    className="w-full h-full object-cover rounded-2xl shadow-2xl"
                   />
                 </div>
               </div>
@@ -132,19 +147,6 @@ export default function Home() {
                 Three great rivers that shaped civilizations and cultures across continents
               </p>
               <RiverCards />
-            </div>
-          </section>
-
-          {/* Overview Section */}
-          <section ref={overviewRef} id="overview" className="py-20 px-4 backdrop-blur-sm bg-muted/50 scroll-mt-24">
-            <div className="container mx-auto max-w-4xl">
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-8 text-foreground">Overview</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed text-center mb-6">
-                Welcome to Breathing Rivers, an immersive journey through the world's most magnificent waterways. Our
-                platform brings together stories, facts, and experiences that showcase how rivers have shaped
-                civilizations, cultures, and ecosystems throughout history. Explore the vital role these natural wonders
-                play in our world today.
-              </p>
             </div>
           </section>
 
